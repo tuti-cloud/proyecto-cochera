@@ -1,0 +1,34 @@
+<app-header></app-header>
+<div id="fondo_total">
+  <div id="fondo-bajo">
+    <div id="tabla">
+      <div id="header-tabla">
+        <div>{{header.nro}}</div>
+        <div>{{header.disponibilidad}}</div>
+        <div>{{header.ingreso}}</div>
+        <div>{{header.acciones}}</div>
+      </div>
+
+      <div *ngFor="let fila of filas">
+        <div>{{ fila.id }}</div>
+        <div [ngClass]="{'disponible': fila.deshabilitada === 0, 'no-disponible': fila.deshabilitada === 1}">
+          {{ fila.deshabilitada === 1 ? 'no disponible' : 'disponible' }}
+        </div>
+        <div>{{ fila.descripcion }}</div>
+        <div class="boton-borrar">
+          <button (click)="eliminarFila(fila.id)">
+            <i class="material-icons">delete</i>
+          </button>
+          <button (click)="cambiarDisponibilidadCochera(i); $event.stopPropagation()">
+            <i class="material-icons">savings</i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Botón para agregar una nueva cochera -->
+      <button (click)="agregarCochera()">Agregar cochera</button>
+    </div>
+  </div>
+</div>
+  
+

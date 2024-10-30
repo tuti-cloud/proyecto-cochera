@@ -1,0 +1,21 @@
+.tabla {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.fila {
+  display: table-row;
+}
+
+.celda {
+  display: table-cell;
+  padding: 5px;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.header {
+  font-weight: bold;
+}

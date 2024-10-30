@@ -1,0 +1,17 @@
+<div class="login-container">
+ 
+    <div class="lado-derecho">
+      <form class="form-de-login">
+        <label for="username">Usuario</label>
+        <input type="text" id="username" [(ngModel)]="datosLogin.username" name="Usuario" placeholder="username" />
+  
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" [(ngModel)]="datosLogin.password" name="password" placeholder="password" />
+        
+        <button type="button" class="iniciosesion" (click)="login()">Iniciar sesión </button>
+        <button  class="Registrarse" (click)="registrarse()"> No tiene cuenta? Registrese aqui!</button>
+      </form>
+    </div>
+  </div>
+
+

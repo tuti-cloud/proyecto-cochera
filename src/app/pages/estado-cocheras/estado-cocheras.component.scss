@@ -1,0 +1,137 @@
+@use "./../../../../public/styles/colores.scss";
+
+
+#fondo_total {
+  background-image: url(./../../../../public/img/pexels-maksym-harbar-14809396.jpg);
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 1000vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+
+  #cerrar-sesion {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+
+
+  }
+}
+
+#tabla {
+  margin-top: 10px; // Ajuste para colapsar con el header
+  width: 480px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
+  
+  // Cambiar max-height para permitir que las cocheras se carguen sin recortar la sombra
+  max-height: unset; // Elimina la limitación de altura
+  height: auto; // Ajusta la altura según el contenido
+
+  #header-tabla {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: rgba(51, 51, 51, 0.9);
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+
+    div {
+      padding: 8px;
+      font-weight: bold;
+    }
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #ddd;
+    color: #fff;
+
+    &:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    &:nth-child(odd) {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+  .disponible {
+    color: green; // Color para cochera habilitada
+  }
+  
+  .no-disponible {
+    color: red; // Color para cochera deshabilitada
+  }
+  
+
+  .boton-borrar {
+    button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+
+      i.material-icons {
+        font-size: 24px;
+        color: #d33;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #900;
+        }
+      }
+
+      &:last-child i.material-icons {
+        color: #3085d6;
+        &:hover {
+          color: #2068b6;
+        }
+      }
+    }
+  }
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 8px 16px;
+  background-color: #3085d6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #2068b6;
+  }
+}
+
+
+
+
+
+
+
+  
+
+
+

@@ -1,0 +1,60 @@
+
+#fondo {
+  background-image: url('./../../../../public/img/pexels-cottonbro-5195654.jpg'); // Ruta de tu imagen
+  background-size: cover;  // Asegura que la imagen cubra toda el área
+  background-position: center; // Centra la imagen en la pantalla
+  background-repeat: no-repeat;  // Evita que la imagen se repita
+  width: 100%;
+  height: 100vh;  // Hace que cubra toda la altura de la ventana
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabla {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  .fila {
+    display: table-row;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    
+    &:nth-child(even) {
+      background-color: #f1f1f1; // Alterna los colores de las filas
+    }
+    
+    .columna {
+      display: table-cell;
+      padding: 10px;
+      text-align: left;
+      vertical-align: middle;
+      border-right: 1px solid #ddd;
+      
+      &:last-child {
+        border-right: none; // Quitar borde derecho en la última columna
+        text-align: center; // Centrar los íconos de acción
+      }
+    }
+  }
+
+  .header {
+    font-weight: bold;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    text-align: left;
+  }
+
+  i {
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #007BFF;
+    }
+  }
+}

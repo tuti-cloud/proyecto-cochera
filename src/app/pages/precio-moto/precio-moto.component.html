@@ -1,0 +1,95 @@
+<app-header></app-header>
+<div id="fondo">
+<div class="tabla">
+
+    <!-- Fila de encabezados -->
+    <div class="fila">
+        <!-- Columna de Tiempo -->
+        <div class="columna">
+            <div class="header">Tiempo</div>
+        </div>
+
+        <!-- Columna de Precio -->
+        <div class="columna">
+            <div class="header">Precio</div>
+        </div>
+
+        <!-- Columna Nueva -->
+        <div class="columna">
+            <div class="header">Acciones</div>
+        </div>
+    </div>
+
+    <!-- Fila 1 -->
+    <div class="fila">
+        <div class="columna">1/2 hora</div>
+        <div class="columna">{{precios_moto.precio_moto1}}</div>
+        <div class="columna">
+            <i class= material-icons (click)="actualizar('precio_moto1')">edit</i>
+        </div>
+    </div>
+
+    <!-- Fila 2 -->
+    <div class="fila">
+        <div class="columna">1 hora</div>
+        <div class="columna">{{precios_moto.precio_moto2}}</div>
+        <div class="columna">
+          <i class= material-icons (click)="actualizar('precio_moto2')">edit</i>
+        </div>
+    </div>
+
+    <!-- Fila 3 -->
+    <div class="fila">
+        <div class="columna">3 horas</div>
+        <div class="columna">{{precios_moto.precio_moto3}}</div>
+        <div class="columna">
+          <i class= material-icons (click)="actualizar('precio_moto3')">edit</i>
+        </div>
+    </div>
+
+    <!-- Fila 4 -->
+    <div class="fila">
+        <div class="columna">5 horas</div>
+        <div class="columna">{{precios_moto.precio_moto4}}</div>
+        <div class="columna">
+          <i class= material-icons (click)="actualizar('precio_moto4')">edit</i>
+        </div>
+    </div>
+
+    <!-- Fila 5 -->
+    <div class="fila">
+        <div class="columna">8 horas</div>
+        <div class="columna">{{precios_moto.precio_moto5}}</div>
+        <div class="columna">
+          <i class= material-icons (click)="actualizar('precio_moto5')">edit</i>
+        </div>
+    </div>
+
+    <!-- Fila 6 -->
+    <div class="fila">
+        <div class="columna">10 horas</div>
+        <div class="columna">{{precios_moto.precio_moto6}}</div>
+        <div class="columna">
+          <i class= material-icons (click)="actualizar('precio_moto6')">edit</i>
+        </div>
+    </div>
+
+    <!-- Fila 7 -->
+    <div class="fila">
+        <div class="columna">12 horas</div>
+        <div class="columna">{{precios_moto.precio_moto7}}</div>
+        <div class="columna">
+          <i class= material-icons (click)="actualizar('precio_moto7')">edit</i>
+        </div>
+    </div>
+
+    <!-- Fila 8 -->
+    <div class="fila">
+        <div class="columna">24 horas</div>
+        <div class="columna">{{precios_moto.precio_moto8}}</div>
+        <div class="columna">
+          <i class= material-icons (click)="actualizar('precio_moto8')">edit</i>
+        </div>
+    </div>
+</div>
+</div>
