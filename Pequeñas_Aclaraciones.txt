@@ -1,0 +1,12 @@
+Hay una función para "registrarse" en login pero es simplemente un modal ya que no habia backend para eso, ocurre lo mismo con precios moto y precios camioneta nada mas que estos ultimos 2 cuentan con una funcion para actualizar el precio  y se guarda en la Localstorage, Precios auto si esta sincronizado con el Backend.
+Todo esto se lo consulte a Lucho y me dijo que no habia problema simplemente que podian no tenerlo en cuenta.
+adjunto algunos de los videos que me ayudaron en el trabajo:
+https://www.youtube.com/watch?v=FJ-w0tf3d_w&pp=ygUQZmV0Y2ggZW4gYW5ndWxhcg%3D%3D
+
+https://youtube.com/playlist?list=PL42UNLc8e48RINrNGumxAKulG5CWgs_yv&si=xfWuQqDHvcZ9-pne 
+
+(no vi la lista entera pero si me ayude con  algunos fragmentos)
+
+
+Saludos,
+Agustiin Angelini
