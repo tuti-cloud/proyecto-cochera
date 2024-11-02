@@ -1,20 +1,26 @@
-
+@use "./../../../../public/styles/colores.scss";
 
 
 h1{
-    font-size: 2rem
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin-top: 0px;
+    font-family: "Oswald";
 }
 a{
     font-size: 2rem;
 }
 .fondo{
-    background-color: rgb(255, 115, 0);
+    background-color:colores.$color-principal;
      text-decoration: none;
 }
 .links{
     text-decoration: none;
      color: black ;
      margin: 100px;
+     cursor: pointer;
+     font-family: "Material Icons";
+     
 }
 nav{
     text-align: center;

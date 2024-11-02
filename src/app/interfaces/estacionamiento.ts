@@ -1,11 +1,13 @@
-export interface estacionamiento{
+export interface Estacionamiento {
     id:number,
     patente: string,
-    horaInegreso: string,
-    horaEgreso: string|null,
-    costo:number|null
-    IdUsuarioIngreso:string;
-    iDUsuarioEgreso:string|null
-    iDcochera: number;
-    eliminado: null;
-}
+    horaIngreso: string,
+    horaEgreso: string | null,
+    costo: number | null,
+    idUsuarioIngreso: string,
+    idUsuarioegreso: string | null,
+    idCochera: number,
+    eliminado: null
+
+       
+    }

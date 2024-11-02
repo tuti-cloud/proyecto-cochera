@@ -9,26 +9,75 @@
         <div>{{header.acciones}}</div>
       </div>
 
-      <div *ngFor="let fila of filas">
-        <div>{{ fila.id }}</div>
-        <div [ngClass]="{'disponible': fila.deshabilitada === 0, 'no-disponible': fila.deshabilitada === 1}">
-          {{ fila.deshabilitada === 1 ? 'no disponible' : 'disponible' }}
-        </div>
-        <div>{{ fila.descripcion }}</div>
-        <div class="boton-borrar">
-          <button (click)="eliminarFila(fila.id)">
-            <i class="material-icons">delete</i>
-          </button>
-          <button (click)="cambiarDisponibilidadCochera(i); $event.stopPropagation()">
-            <i class="material-icons">savings</i>
-          </button>
-        </div>
+      @for (fila of filas; track $index) {
+
+      <div class="fila">
+        <div>{{$index+1}}</div>
+
+       
+        @if (fila.activo){
+          <div>{{ fila.activo.patente }}</div>
+        }
+        @else if (fila.deshabilitada) {
+          <div><span class="no-disponible">NO DISPONIBLE</span></div>
+        }
+        @else {
+          <div (click)="abrirModalNuevoEstacionamiento(fila.id)"><span class="Disponible">DISPONIBLE</span></div>
+        }
+
+<div>{{ fila.activo?.horaIngreso }}</div>
+
+<!-- Botones de acción -->
+<div class="botones-accion">
+
+  <!-- Botón de eliminar, solo habilitado si no hay un auto estacionado -->
+  <i 
+    id="boton-eliminar" 
+    class="material-icons" 
+    [ngClass]="{'deshabilitado': fila.activo}" 
+    (click)="!fila.activo && abrirModalEliminarCochera(fila.id); $event.stopPropagation()">
+    delete
+  </i>
+
+  <!-- Botón de cobrar, solo habilitado si hay un auto estacionado -->
+  <i 
+    id="boton-cobrar" 
+    class="material-icons" 
+    [ngClass]="{'deshabilitado': !fila.activo}" 
+    (click)="fila.activo && abrirModalCalculoTarifa(fila.id); $event.stopPropagation()">
+    savings
+  </i>
+
+  <!-- Botón de no disponible, solo habilitado si la cochera está disponible y sin auto -->
+  <i 
+    id="boton-no-disponible" 
+    class="material-icons" 
+    [ngClass]="{'deshabilitado': fila.activo || fila.deshabilitada}" 
+    (click)="!fila.activo && !fila.deshabilitada && abrirModalDeshabilitarCochera(fila.id); $event.stopPropagation()">
+    do_not_disturb_on
+  </i>
+
+  <!-- Botón de habilitar, solo habilitado si la cochera está no disponible -->
+  <i 
+    id="boton-habilitar" 
+    class="material-icons" 
+    [ngClass]="{'deshabilitado': !fila.deshabilitada}" 
+    (click)="fila.deshabilitada && abrirModalHabilitarCochera(fila.id); $event.stopPropagation()">
+    check
+  </i>
+
+</div>
+
+
+        
       </div>
 
-      <!-- Botón para agregar una nueva cochera -->
-      <button (click)="agregarCochera()">Agregar cochera</button>
+      }
     </div>
+    <div class="boton-agregar">
+      <button id="boton" (click)="agregarFila()">Agregar fila</button>
+  </div>
   </div>
 </div>
-  
 
+  

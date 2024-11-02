@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router'; // Importar Router
 import Swal from 'sweetalert2';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,7 @@ import Swal from 'sweetalert2';
 export class HeaderComponent {
 
   constructor(private router: Router) {} 
-
+  auth = inject(AuthService);
   seleccionar_vehiculo() {
     Swal.fire({
       title: "Seleccione el vehiculo",
@@ -50,7 +51,17 @@ export class HeaderComponent {
       }
     });
   }
+  Logout() {
+    // Elimina el token de autenticación almacenado en la localStorage
+    this.auth.Logout()
+
+    
+    this.router.navigate(['/login']);
+  }
+
+
 }
+
 
 
   

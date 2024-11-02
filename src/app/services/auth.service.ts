@@ -37,6 +37,14 @@ return true;
   
 })
 }
+Logout() {
+  localStorage.removeItem("token");
 }
+
+
+
+
+}
+
 
 

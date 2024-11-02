@@ -1,18 +1,38 @@
 @use "./../../../../public/styles/colores.scss";
 
+*{
+  font-family: "Oswald";
+}
 
 #fondo_total {
-  background-image: url(./../../../../public/img/pexels-maksym-harbar-14809396.jpg);
-  padding: 20px;
+  background-image: url(./../../../../public/img/fondo-estado.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 1000vh;
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  font-family: 'Times New Roman', Times, serif;
+  overflow: hidden; 
+
+  #cerrar-sesion {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+  }
+}
+
+html, body {
+  height: 100%; 
+  margin: 0; 
+}
+
+body {
+  overflow: auto; 
+}
+
 
   #cerrar-sesion {
     position: absolute;
@@ -22,19 +42,19 @@
 
 
   }
-}
+
 
 #tabla {
-  margin-top: 10px; // Ajuste para colapsar con el header
+  margin-top: 10px; 
   width: 480px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
   padding: 15px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6);
   
-  // Cambiar max-height para permitir que las cocheras se carguen sin recortar la sombra
-  max-height: unset; // Elimina la limitación de altura
-  height: auto; // Ajusta la altura según el contenido
+  
+  max-height: unset; 
+  height: auto; 
 
   #header-tabla {
     display: grid;
@@ -72,40 +92,65 @@
       background-color: rgba(0, 0, 0, 0.4);
     }
   }
-  .disponible {
-    color: green; // Color para cochera habilitada
+  .Disponible {
+    color: green; 
+    cursor: pointer;
   }
   
   .no-disponible {
-    color: red; // Color para cochera deshabilitada
+    color: red; 
+    cursor: pointer;
   }
   
 
-  .boton-borrar {
-    button {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 5px;
-
-      i.material-icons {
-        font-size: 24px;
-        color: #d33;
-        transition: color 0.3s ease;
-
-        &:hover {
-          color: #900;
-        }
-      }
-
-      &:last-child i.material-icons {
-        color: #3085d6;
-        &:hover {
-          color: #2068b6;
-        }
-      }
+  #boton-eliminar {
+    font-size: 24px;
+    color: colores.$color-botones-estadococheras;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  font-family: "material icons";
+    &:hover {
+      color: rgb(250, 250, 250);
     }
   }
+  
+  #boton-cobrar {
+    font-size: 24px;
+    color: colores.$color-botones-estadococheras;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    font-family: "material icons";
+    &:hover {
+      color: #07b5f4;
+    }
+  }
+  
+  #boton-no-disponible {
+    font-size: 24px;
+    color: colores.$color-botones-estadococheras;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    font-family: "material icons";
+    &:hover {
+      color: #ff0202;
+    }
+  }
+  
+  #boton-habilitar {
+    font-size: 24px;
+    color: colores.$color-botones-estadococheras;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    font-family: "material icons";
+    &:hover {
+      color: #009944;
+    }
+  }
+}  
+.deshabilitado {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 button {

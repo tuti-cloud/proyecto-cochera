@@ -1,125 +1,117 @@
 @use "././../../../../public/styles/colores.scss";
 
-*{
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+* {
+  font-family: "Knewave";
 }
 
-
-.video-container{
-  position:absolute;
-  top: 0;
-  left: 0;
-  z-index: -3;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.video-container video{
-  position: relative;
-  top: 50%;
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  color: colores.$color-principal;
+  position: absolute; 
+  top: 4%; 
   left: 50%;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  transform:translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
+
 .login-container {
-    display: flex;
-    height: 899px;
-    background-image: url(./../../../../public/img/car-5548242_1280.jpg);
-    background-size: cover;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  height: 100vh;
+  background-image: url(./../../../../public/img/car-5548242_1280.jpg);
+  background-size: cover;
+}
+
+.lado-derecho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: transparent;
+  border-radius: 10px;
+}
+
+.form-de-login {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  gap: 10px;
+  width: 300px;
+}
+
+.form-de-login label {
+  font-size: 0.9rem;
+  color: hsl(221, 87%, 22%);
+}
+
+.form-de-login input {
+  padding: 8px;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+}
+
+.iniciosesion {
+  padding: 15px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; 
+
+  &:hover {
+    background: linear-gradient(45deg, #000000, #434343); 
+    transform: scale(1.05); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); 
   }
-  
-  .lado-izq {
-    flex: 1;
-    background-color: colores.$color-secundario;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 2rem;
-    width: 200px;
-  }
-  
-  .lado-derecho {
-    flex: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    margin-left: 800px; 
-  }
-  
-  .form-de-login {
-    display: flex;
-    flex-direction: column;
-    margin: 50px;
-    gap: 10px;
-    width: 300px;
-  }
-  
-  
-  .form-de-login label {
-    font-size: 0.9rem;
-    color: hsl(221, 87%, 22%);
-  }
-  
-  .form-de-login input {
-    padding: 8px;
-    border: 1px solid #3a3a3a;
-    border-radius: 4px;
-  }
-  
-  .iniciosesion {
-    padding: 10px;
-    background-color: #000000;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  .form-de-login .Registrarse {
-    margin-top: 10px;
-    text-align: center;
-    color: #3a3a3a;
-    text-decoration: none;
-  }
-  
-  .register-link:hover {
-    text-decoration: underline;
-  }
-/* Estilo de la caja del modal */
+}
+
+.form-de-login .Registrarse {
+  margin-top: 10px;
+  text-align: center;
+  color: #3a3a3a;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+
 .swal2-popup {
   background-image: url(./../../../../public/img/car-3474.gif);
   margin-bottom: 5px;
-  width: 550px;
-  height: 400px;
-  text-align: center; /* Alineación centrada para el texto */
+  width: 450px;
+  height: 350px;
+  text-align: center; 
 }
 
-/* Cambiar el color del título del modal */
+
 .swal2-title {
   font-size: 1.5rem;
   color: white;
-  text-align: center; /* Alineación centrada para el título */
+  text-align: center; 
 }
 
-/* Estilo para el contenido del modal */
+
 .swal2-content {
-  text-align: center; /* Alineación centrada para el contenido */
+  text-align: center; 
   color: #cccccc;
 }
 
-/* Estilo para los inputs personalizados dentro del modal */
+
 .swal2-input {
   border: 2px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
   padding: 10px;
-  margin: 5px auto 15px; /* Centrar el input y agregar margen inferior */
+  margin: 5px auto 15px; 
   width: 350px;
   color: #ccc;
 }
